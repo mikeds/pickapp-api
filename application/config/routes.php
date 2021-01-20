@@ -68,20 +68,20 @@ $route["client/lookup/tx"]              = "api/Client_lookup/tx";
 $route["client/balance"]                = "api/Client/balance";
 $route["client/tx-history"]             = "api/Client_tx/history";
 
-// PASTOR
-$route["pastor/login"]                  = "api/Pastor_login";
-$route["pastor/registration"]           = "api/Pastor_registration";
+// MERCHANT
+$route["merchant/login"]                  = "api/Pastor_login";
+$route["merchant/registration"]           = "api/Pastor_registration";
 
-$route["pastor/cash-in/accept"]         = "api/Pastor_cash_in/accept";
+$route["merchant/cash-in/accept"]         = "api/Pastor_cash_in/accept";
 
-$route["pastor/top-up/request"]         = "api/Pastor_top_up/request";
+$route["merchant/top-up/request"]         = "api/Pastor_top_up/request";
 
-$route["pastor/lookup/tx"]              = "api/Pastor_lookup/tx";
-$route["pastor/tx-history"]             = "api/Pastor_tx/history";
+$route["merchant/lookup/tx"]              = "api/Pastor_lookup/tx";
+$route["merchant/tx-history"]             = "api/Pastor_tx/history";
 
-$route["pastor/balance"]                = "api/Pastor/balance";
+$route["merchant/balance"]                = "api/Pastor/balance";
 
-$route["lookup/pastor-list"]            = "api/Lookup/pastor_list";
+$route["lookup/merchant-list"]          = "api/Lookup/pastor_list";
 $route["lookup/church-branches"]        = "api/Lookup/church_branches";
 $route["lookup/countries"]              = "api/Lookup/countries";
 $route["lookup/provinces/(:num)"]       = "api/Lookup/provinces/$1";
