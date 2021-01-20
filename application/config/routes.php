@@ -82,7 +82,7 @@ $route["merchant/tx-history"]             = "api/Pastor_tx/history";
 $route["merchant/balance"]                = "api/Pastor/balance";
 
 $route["lookup/merchant-list"]          = "api/Lookup/pastor_list";
-$route["lookup/church-branches"]        = "api/Lookup/church_branches";
+$route["lookup/branches"]        = "api/Lookup/church_branches";
 $route["lookup/countries"]              = "api/Lookup/countries";
 $route["lookup/provinces/(:num)"]       = "api/Lookup/provinces/$1";
 
