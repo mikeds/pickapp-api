@@ -28,11 +28,11 @@ class Client_registration extends Api_Controller {
 
 			$password 		= isset($post['password']) ? $post['password'] : "";
 
-			if ($fname == "" || $lname == "" || $email_address == "" || $mobile_no == "" || $password == "" || $dob == "" || $province_id == "" || $city = "") {
+			if ($fname == "" || $lname == "" || $email_address == "" || $mobile_no == "" || $password == "" || $province_id == "" || $city = "") {
 				echo json_encode(
 					array(
 						'error'		=> true,
-						'message'	=> "Please complete the parameters! Note: [first_name, last_name, mobile_no, email_address, dob, password, confirm_password, province_id, city] are required.",
+						'message'	=> "Please complete the parameters! Note: [first_name, last_name, mobile_no, email_address, password, province_id, city] are required.",
 						'timestamp'	=> $this->_today
 					)
 				);
