@@ -18,11 +18,11 @@ class Pastor_registration extends Api_Controller {
 
 			$password 			= isset($post['password']) ? $post['password'] : "";
 
-			if ($fname == "" || $lname == "" || $email_address == "" || $mobile_no == "" || $password == "" || $dob == "") {
+			if ($fname == "" || $lname == "" || $email_address == "" || $mobile_no == "" || $password == "") {
 				echo json_encode(
 					array(
 						'error'		=> true,
-						'message'	=> "Please complete the parameters! Note: [first_name, last_name, mobile_no, email_address, dob, password, confirm_password] are required.",
+						'message'	=> "Please complete the parameters! Note: [first_name, last_name, mobile_no, email_address, password] are required.",
 						'timestamp'	=> $this->_today
 					)
 				);
