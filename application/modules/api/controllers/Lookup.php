@@ -64,7 +64,7 @@ class Lookup extends Api_Controller {
         
         echo json_encode(
             array(
-                'message'	=> "Successfully fetch pastor accounts!",
+                'message'	=> "Successfully fetch merchant accounts!",
                 'timestamp'	=> $this->_today,
                 'response'  => $results
             )
