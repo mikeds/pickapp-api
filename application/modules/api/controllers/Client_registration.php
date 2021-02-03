@@ -28,11 +28,11 @@ class Client_registration extends Api_Controller {
 
 			$password 		= isset($post['password']) ? $post['password'] : "";
 
-			if ($fname == "" || $lname == "" || $email_address == "" || $mobile_no == "" || $password == "" || $dob == "" || $pastor_id == "" || $province_id == "" || $city = "") {
+			if ($fname == "" || $lname == "" || $email_address == "" || $mobile_no == "" || $password == "" || $dob == "" || $province_id == "" || $city = "") {
 				echo json_encode(
 					array(
 						'error'		=> true,
-						'message'	=> "Please complete the parameters! Note: [pastor_id, first_name, last_name, mobile_no, email_address, dob, password, confirm_password, province_id, city] are required.",
+						'message'	=> "Please complete the parameters! Note: [first_name, last_name, mobile_no, email_address, dob, password, confirm_password, province_id, city] are required.",
 						'timestamp'	=> $this->_today
 					)
 				);
@@ -106,24 +106,24 @@ class Client_registration extends Api_Controller {
 				die();
 			}
 
-			$pastor_row = $this->pastor_accounts->get_datum(
-				'',
-				array(
-					'account_number' => $pastor_id,
-					'account_status' => 1 
-				)
-			)->row();
+			// $pastor_row = $this->pastor_accounts->get_datum(
+			// 	'',
+			// 	array(
+			// 		'account_number' => $pastor_id,
+			// 		'account_status' => 1 
+			// 	)
+			// )->row();
 
-			if ($pastor_row == "" && $pastor_id != "0") {
-				echo json_encode(
-					array(
-						'error'		=> true,
-						'message'	=> "Invalid pastor id!",
-						'timestamp'	=> $this->_today
-					)
-				);
-				return;
-			}
+			// if ($pastor_row == "" && $pastor_id != "0") {
+			// 	echo json_encode(
+			// 		array(
+			// 			'error'		=> true,
+			// 			'message'	=> "Invalid pastor id!",
+			// 			'timestamp'	=> $this->_today
+			// 		)
+			// 	);
+			// 	return;
+			// }
 
 			$account_number = $this->generate_code(
 				array(
@@ -145,7 +145,7 @@ class Client_registration extends Api_Controller {
 			$expiration_date = $time->format('Y-m-d H:i:s');
 
 			$insert_data = array(
-				'pastor_account_number'		=> $pastor_id,
+				// 'pastor_account_number'		=> $pastor_id,
 				'account_number'			=> $account_number,
 				'account_password'			=> $password,
 				'account_fname'				=> $fname,
