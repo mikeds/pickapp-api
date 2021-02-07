@@ -62,7 +62,7 @@ class Pastor_registration extends Api_Controller {
 				return;
 			}
 
-			if ($this->validate_email($email_address)) {
+			if ($this->validate_email_address($email_address)) {
 				echo json_encode(
 					array(
 						'error'		=> true,
