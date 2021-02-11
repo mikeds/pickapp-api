@@ -59,7 +59,7 @@ $route["client/registration"]           = "api/Client_registration";
 
 $route["client/cash-in/request"]        = "api/Client_cash_in/request";
 
-$route["client/transfer"]               = "api/Client_gift/send";
+$route["client/transfer/send"]          = "api/Client_transfer/send";
 
 $route["client/lookup/pastor-list"]     = "api/Client_lookup/pastor_list";
 $route["client/lookup/qr-code"]         = "api/Client_lookup/qr_code";
