@@ -1,4 +1,4 @@
-<h3>SURGE ACCOUNT ACTIVATION</h3>
+<h3>PICKAPP ACCOUNT ACTIVATION</h3>
 <p>
     Expiration Datetime: <?=isset($expiration_date) ? $expiration_date : ""?>
 </p>
